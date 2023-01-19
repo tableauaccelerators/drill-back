@@ -4,30 +4,37 @@
 	<title>Drill to your Source Application!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--	  
+	  
    <script>
-		function getParameter(parameterName){
-			let parameters = new URLSearchParams(window.location.search);
-			return parameters.get(parameterName);
-			}
-	        function getParameterName(){
-			let parameters = new URLSearchParams(window.location.search);
-			return parameters.keys();
-			}
+		function getParameter(){
+			let urlString  = window.location.href;
+			let paramString = urlString.split('?')[1];
+        		let queryString = new URLSearchParams(paramString);
+        		for(let pair of queryString.entries()) {
+            			console.log("Key is:" + pair[0]);
+            			console.log("Value is:" + pair[1]);
+        			}
+    			}    
+
+	        //function getParameterName(){
+		//	let parameters = new URLSearchParams(window.location.search);
+		//	return parameters.keys();
+		//	}
   </script>
--->
+
   </head>
   <body>
 		<object data="logo-salesforce.svg" width="80" height="80"> </object>
 		<p></p>
 		<p></p>
-		<h4>Id8: </h4>
+		<h4>Id9: </h4>
 	  
 		<script>
+			getParameter();
 			//getParameter('Opportunity');
                 	//console.log(Opportunity);
-			var parameters = new URLSearchParams(window.location.search);
-			console.log(parameters);
+			//var parameters = new URLSearchParams(window.location.search);
+			//console.log(parameters);
 			//var keys = parameters.keys();
 			//for(key of keys) { console.log(key); }
 			//for(val of parameters.values()) { console.log(val);  }
