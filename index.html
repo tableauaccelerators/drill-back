@@ -9,6 +9,10 @@
 			let parameters = new URLSearchParams(window.location.search);
 			return parameters.get(parameterName);
 			}
+	        function getParameterName(){
+			let parameters = new URLSearchParams(window.location.search);
+			return parameters.keys();
+			}
   </script>
   </head>
   <body>
@@ -17,8 +21,12 @@
 		<p></p>
 		//<h4>Id: </h4>
 		<script>
-		getParameter('drillback_id');
-                //console.log(drillback_id);	
+		getParameter('Opportunity');
+                //console.log(Opportunity);
+		var keys=getParameterName();	
+		for(key of keys) { 
+			console.log(key); 
+		}	
 		console.log(parameters.toString());	
 		</script> 
 		<p></p>
