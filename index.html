@@ -10,10 +10,14 @@
 		<object data="logo-salesforce.svg" width="80" height="80"> </object>
 		<p></p>
 		<p></p>
-		<h4>Id2: </h4>
+		<h4>Id3: </h4>
 	  
 		<script>
-			let urlString  = window.location.href;
+			function getCurrentURL () {
+  			return window.location.href
+			}
+			let urlString  = getCurrentURL();
+			console.log(urlString);
 			let paramString = urlString.split('?')[1];
         		let queryString = new URLSearchParams(paramString);
         		for(let pair of queryString.entries()) {
