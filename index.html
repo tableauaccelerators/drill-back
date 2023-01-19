@@ -15,13 +15,8 @@
 			let urlString  = window.location.href;
 			let paramString = urlString.split('?')[1];
         		let queryString = new URLSearchParams(paramString);
-        		for(let pair of queryString.entries()) {
-            			document.getElementById("Accelerator").innerHTML =pair[0] + ": "+pair[1];
-            		
-        			}
-
+        		for(let pair of queryString.entries()) {document.getElementById("Accelerator").innerHTML =pair[0] + ": "+pair[1];}
 		</script> 
-	  
 		<p></p>
 		<p>This Accelerator is configured to allow you to drill back to your Source Application (Salesforce Service Cloud or other) and deep-dive to each record.</p>
 		<p></p>
