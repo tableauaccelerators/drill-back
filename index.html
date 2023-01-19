@@ -10,16 +10,15 @@
 		<object data="logo-salesforce.svg" width="80" height="80"> </object>
 		<p></p>
 		<p></p>
-		<h4>Id4: </h5>
-	  
+		<h4>Id5: </h5>
+	  	<p id="Accelerator"></p>
 		<script>
 			let urlString  = window.location.href;
-			console.log(urlString);
 			let paramString = urlString.split('?')[1];
         		let queryString = new URLSearchParams(paramString);
         		for(let pair of queryString.entries()) {
-            			console.log("Key is:" + pair[0]);
-            			console.log("Value is:" + pair[1]);
+            			document.getElementById("Accelerator").innerHTML ="Key is:" + pair[0];
+            			document.getElementById("Accelerator").innerHTML ="Value is:" + pair[1];
         			}
 
 		</script> 
