@@ -15,7 +15,7 @@
 			let urlString  = window.location.href;
 			let paramString = urlString.split('?')[1];
         		let queryString = new URLSearchParams(paramString);
-        		for(let pair of queryString.entries()) {document.getElementById("Accelerator").innerHTML =pair[0] + ": <b>"+pair[1] +"</b>";}
+        		for(let pair of queryString.entries()) {document.getElementById("Accelerator").innerHTML ="<H1>" + pair[0] + ": <b>" + pair[1] + "</b></H1>";}
 		</script> 
 		<p></p>
 		<p>This Accelerator is configured to allow you to drill back to your Source Application (Salesforce or other) and take immediate actions.</p>
